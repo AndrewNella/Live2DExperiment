@@ -1,0 +1,23 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "Nella_L2D.moc3",
+		"Textures": [
+			"Nella_L2D.16384/texture_00.png"
+		],
+		"Physics": "Nella_L2D.physics3.json",
+		"DisplayInfo": "Nella_L2D.cdi3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		}
+	]
+}
