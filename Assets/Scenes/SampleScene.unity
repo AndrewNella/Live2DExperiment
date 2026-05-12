@@ -7353,6 +7353,10 @@ PrefabInstance:
       propertyPath: '_childDrawableRenderers.Array.data[2]'
       value: 
       objectReference: {fileID: 172112622}
+    - target: {fileID: 1154815961263861553, guid: 89eb22dd8548879418e5b2f29199f8ba, type: 3}
+      propertyPath: _isOverriddenParameterRepeat
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1534425270970022021, guid: 89eb22dd8548879418e5b2f29199f8ba, type: 3}
       propertyPath: '_childDrawableRenderers.Array.data[0]'
       value: 
@@ -7487,15 +7491,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2975929347511846801, guid: 89eb22dd8548879418e5b2f29199f8ba, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2975929347511846801, guid: 89eb22dd8548879418e5b2f29199f8ba, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2975929347511846801, guid: 89eb22dd8548879418e5b2f29199f8ba, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2975929347511846801, guid: 89eb22dd8548879418e5b2f29199f8ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -23993,8 +23997,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2000564186}
   - {fileID: 172112508}
+  - {fileID: 2000564186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &536715514
@@ -50962,6 +50966,10 @@ PrefabInstance:
     - target: {fileID: 4075840833532596073, guid: 52713fd5a3ca2674083d05c4dc8100da, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086937215049484739, guid: 52713fd5a3ca2674083d05c4dc8100da, type: 3}
+      propertyPath: m_EditorClassIdentifier
+      value: Live2D.Cubism::Live2D.Cubism.Framework.CubismParametersInspector
       objectReference: {fileID: 0}
     - target: {fileID: 4099241414480361079, guid: 52713fd5a3ca2674083d05c4dc8100da, type: 3}
       propertyPath: m_Enabled
