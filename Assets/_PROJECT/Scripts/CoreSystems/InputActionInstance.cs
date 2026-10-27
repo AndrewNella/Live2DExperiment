@@ -1,17 +1,19 @@
 using UnityEngine;
 
-public class InputActionInstance : MonoBehaviour {
+public class TFNovelInputActions : MonoBehaviour
+{
 
-    public static InputActionInstance instance;
+    public static TFNovelInputActions instance;
 
     [field: SerializeField] public GameInputs gameInputActions { get; private set; }
 
-    void Awake () {
+    void Awake()
+    {
         if (instance == null) instance = this;
 
-        gameInputActions = new GameInputs ();
-        gameInputActions.Enable ();
+        gameInputActions = new GameInputs();
+        gameInputActions.Enable();
     }
 
-  
+
 }
