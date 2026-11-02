@@ -13,6 +13,11 @@ public class LevelPreviewManager : MonoBehaviour
         InitializePreviewImageSystem();
     }
 
+    void Start()
+    {
+        MenuFolderSelectionManager.OnMenuFolderAnimation += AnimatePreviewWindow;
+    }
+
     void InitializePreviewImageSystem()
     {
         foreach (RectTransform _rectTransform in GetComponentsInChildren<RectTransform>())
@@ -31,11 +36,16 @@ public class LevelPreviewManager : MonoBehaviour
     public void AnimatePreviewWindow(bool _animateIn)
     {
 
-        Debug.Log(previewImage.GetComponent<RectTransform>().rect.width);
+        // Debug.Log(previewImage.GetComponent<RectTransform>().rect.width);
 
         if (previewImageRectT != null) previewImageRectT.DOAnchorPosX(_animateIn ? previewOffset : previewImage.GetComponent<RectTransform>().rect.width, previewAnimationTime);
 
 
     }
 
+    void OnDestroy()
+    {
+        MenuFolderSelectionManager.OnMenuFolderAnimation -= AnimatePreviewWindow;
+
+    }
 }

@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEditor.Search;
@@ -9,11 +10,14 @@ public class MenuFolderSelectionManager : MonoBehaviour, IPointerEnterHandler, I
 
     [SerializeField] float animationDistance, AnimationTime;
 
+    public static event Action<bool> OnMenuFolderAnimation;
+
     float originalLocalPostion;
 
     private void Start()
     {
         originalLocalPostion = transform.localPosition.y;
+
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -29,13 +33,10 @@ public class MenuFolderSelectionManager : MonoBehaviour, IPointerEnterHandler, I
 
     void AnimateButton(bool _animateButton)
     {
-        if (_animateButton)
-        {
-            transform.DOLocalMoveY(originalLocalPostion + animationDistance, AnimationTime);
-        }
-        else
-        {
-            transform.DOLocalMoveY(originalLocalPostion, AnimationTime);
-        }
+
+        if (_animateButton) transform.DOLocalMoveY(originalLocalPostion + animationDistance, AnimationTime);
+        else transform.DOLocalMoveY(originalLocalPostion, AnimationTime);
+
+        OnMenuFolderAnimation?.Invoke(_animateButton);
     }
 }
